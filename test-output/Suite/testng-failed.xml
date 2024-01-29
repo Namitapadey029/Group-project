@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" parallel="methods" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="1" parallel="methods" name="Test">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="first.class6extent"/>
+    </classes>
+  </test> <!-- Test -->
+  <test parallel="methods" name="Test(failed)">
+    <groups>
+      <run>
+        <include name="Smoke"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="first.class6extent">
+        <methods>
+          <include name="teardown"/>
+          <include name="setup"/>
+          <include name="addtocartproduct"/>
+        </methods>
+      </class> <!-- first.class6extent -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
